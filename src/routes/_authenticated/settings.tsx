@@ -23,7 +23,8 @@ function SettingsPage() {
   const { data: allTxns = [] } = useAllTransactions();
   const [newCat, setNewCat] = useState("");
   const [newFixed, setNewFixed] = useState(false);
-
+  const [newBudget, setNewBudget] = useState(0);
+  
   const updateProfile = useMutation({
     mutationFn: async (patch: Partial<{ currency: string; display_name: string }>) => {
       const { error } = await supabase.from("profiles").update(patch).eq("id", profile!.id);
@@ -35,12 +36,30 @@ function SettingsPage() {
   const addCat = useMutation({
     mutationFn: async () => {
       const { data: u } = await supabase.auth.getUser();
-      const { error } = await supabase.from("categories").insert({ user_id: u.user!.id, name: newCat, is_fixed: newFixed });
+      //const { error } = await supabase.from("categories").insert({ user_id: u.user!.id, name: newCat, is_fixed: newFixed });
+      const { data: category, error } = await supabase
+        .from("categories")
+        .insert({
+            user_id: u.user!.id,
+            name: newCat,
+            is_fixed: newFixed,
+        })
+        .select()
+        .single();
       if (error) throw error;
     },
-    onSuccess: () => { qc.invalidateQueries({ queryKey: ["categories"] }); setNewCat(""); setNewFixed(false); },
+    onSuccess: () => { qc.invalidateQueries({ queryKey: ["categories"] }); setNewCat(""); setNewFixed(false);setnewBudget(0); },
   });
-
+  const monthKey = new Date().toISOString().slice(0,7);
+  // "2026-07"
+  
+  await supabase
+      .from("budgets")
+      .upsert({
+          month: monthKey,
+          category_id: category.id,
+          planned_amount: newBudget,
+      });
   const toggleFixed = useMutation({
     mutationFn: async ({ id, is_fixed }: { id: string; is_fixed: boolean }) => {
       const { error } = await supabase.from("categories").update({ is_fixed }).eq("id", id);
@@ -92,6 +111,7 @@ function SettingsPage() {
         <p className="text-xs text-muted-foreground">Fixed categories (Rent, SIP, EMIs) are excluded from the daily spending pace.</p>
         <div className="flex gap-2">
           <Input placeholder="New category" value={newCat} onChange={(e) => setNewCat(e.target.value)} />
+          <Input type="number" placeholder="Monthly Budget" value={newBudget} onChange={(e) => setNewBudget(Number(e.target.value))} />
           <label className="flex items-center gap-1.5 text-xs text-muted-foreground shrink-0">
             <input type="checkbox" checked={newFixed} onChange={(e) => setNewFixed(e.target.checked)} /> Fixed
           </label>
