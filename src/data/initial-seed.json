@@ -1,0 +1,2287 @@
+{
+ "transactions": [
+  {
+   "date": "2023-09-01",
+   "amount": 29.0,
+   "description": "milk curd",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-01-09",
+   "amount": 78400.0,
+   "description": "Paycheck",
+   "category": "Paycheck",
+   "kind": "income",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-01",
+   "amount": 61.0,
+   "description": "uber to movie",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-12-09",
+   "amount": 160.0,
+   "description": "creditcard cashback",
+   "category": "Interest",
+   "kind": "income",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-01",
+   "amount": 80.0,
+   "description": "etsy listings",
+   "category": "Personal",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-01",
+   "amount": 135.0,
+   "description": "momos",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-01",
+   "amount": 200.0,
+   "description": "chaayos shake",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-01",
+   "amount": 346.0,
+   "description": "rocky",
+   "category": "Entertainment",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-01",
+   "amount": 11750.0,
+   "description": "Rent",
+   "category": "Home",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-02",
+   "amount": 1.0,
+   "description": "just in case",
+   "category": "Travel",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-02",
+   "amount": 20.0,
+   "description": "juice",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-02",
+   "amount": 75.0,
+   "description": "auto from yumee",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-02",
+   "amount": 100.0,
+   "description": "garbage guy",
+   "category": "Home",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-02",
+   "amount": 217.0,
+   "description": "ice cream ",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-02",
+   "amount": 850.0,
+   "description": "yumee",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-02",
+   "amount": 2000.0,
+   "description": "Anju",
+   "category": "Home",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-02",
+   "amount": 2040.0,
+   "description": "electric ",
+   "category": "electric",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-02",
+   "amount": 15428.0,
+   "description": "trade",
+   "category": "Savings",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-02",
+   "amount": 30000.0,
+   "description": "SIP",
+   "category": "SIP",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-03",
+   "amount": 157.0,
+   "description": "burger 24 /7",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-03",
+   "amount": 220.0,
+   "description": "sardar baksh",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-03",
+   "amount": 510.0,
+   "description": "magic mints ",
+   "category": "Dancing juice",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-04",
+   "amount": 78.0,
+   "description": "comb",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-04",
+   "amount": 126.0,
+   "description": "dish soap+surf",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-04",
+   "amount": 282.0,
+   "description": "refined oil+Vegetable+milk",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-05",
+   "amount": 30.0,
+   "description": "juice",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-05",
+   "amount": 171.0,
+   "description": "chaayos drink",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-06",
+   "amount": 20.0,
+   "description": "burger",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-06",
+   "amount": 60.0,
+   "description": "rubberbands",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-06",
+   "amount": 270.0,
+   "description": "fruits+ vegetables",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-06",
+   "amount": 823.0,
+   "description": "evoo+Baskin",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-07",
+   "amount": 60.0,
+   "description": "kulfi",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-08",
+   "amount": 34.0,
+   "description": "dhokla",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-08",
+   "amount": 75.0,
+   "description": "auto chillies",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-08",
+   "amount": 300.0,
+   "description": "Kissatin",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-08",
+   "amount": 300.0,
+   "description": "OMG2",
+   "category": "entertainment",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-08",
+   "amount": 850.0,
+   "description": "chillies",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-09",
+   "amount": 59.0,
+   "description": "milk+ dahi",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-10",
+   "amount": 65.0,
+   "description": "chips tictac",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-10",
+   "amount": 90.0,
+   "description": "paint",
+   "category": "Personal",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-10",
+   "amount": 96.0,
+   "description": "hot chocolate ",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-10",
+   "amount": 112.0,
+   "description": "chutney",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-10",
+   "amount": 145.0,
+   "description": "munchies",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-10",
+   "amount": 250.0,
+   "description": "AC Fan repair",
+   "category": "Home",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-11",
+   "amount": 45.0,
+   "description": "remover",
+   "category": "Personal",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-12",
+   "amount": 100.0,
+   "description": "top repair",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-13",
+   "amount": 130.0,
+   "description": "vegetables ",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-14",
+   "amount": 30.0,
+   "description": "shake",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-14",
+   "amount": 160.0,
+   "description": "biryani",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-14",
+   "amount": 330.0,
+   "description": "apus stuff+rolls",
+   "category": "Dancing juice",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-15",
+   "amount": 388.5,
+   "description": "smart point",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-16",
+   "amount": 95.0,
+   "description": "gyani",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-16",
+   "amount": 106.0,
+   "description": "auto",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-16",
+   "amount": 212.0,
+   "description": "theo",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-16",
+   "amount": 419.0,
+   "description": "pharma 24/7",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-16",
+   "amount": 622.0,
+   "description": "HKV",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-17",
+   "amount": 70.0,
+   "description": "auto to DLF",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-17",
+   "amount": 133.0,
+   "description": "milk poha besan sugar",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-17",
+   "amount": 400.0,
+   "description": "A haunting in Venice movie ",
+   "category": "entertainment",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-17",
+   "amount": 500.0,
+   "description": "Viet nom",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-18",
+   "amount": 100.0,
+   "description": "stickers gottea",
+   "category": "Personal",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-18",
+   "amount": 415.0,
+   "description": " gottea",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-19",
+   "amount": 73.0,
+   "description": "idli",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-20",
+   "amount": 513.0,
+   "description": "daal peas oil amazon",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-20",
+   "amount": 155.0,
+   "description": "apples+ icecream ",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-20",
+   "amount": 120.0,
+   "description": "vegetables ",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-21",
+   "amount": 75.0,
+   "description": "juice",
+   "category": "gym",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-21",
+   "amount": 400.0,
+   "description": "layla",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-21",
+   "amount": 700.0,
+   "description": "essential oils",
+   "category": "Personal",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-21",
+   "amount": 95.0,
+   "description": "auto from layla",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-22",
+   "amount": 160.0,
+   "description": "gottea",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-23",
+   "amount": 40.0,
+   "description": "auto",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-23",
+   "amount": 120.0,
+   "description": "Sultan Roll",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-23",
+   "amount": 575.0,
+   "description": "big chill",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-23",
+   "amount": 30.0,
+   "description": "sprite",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-24",
+   "amount": 766.5,
+   "description": "Mallu baby",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-24",
+   "amount": 80.0,
+   "description": "auto",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-25",
+   "amount": 14.0,
+   "description": "odimos",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-26",
+   "amount": 256.0,
+   "description": "third wave cafe",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-26",
+   "amount": 80.0,
+   "description": "auto",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-28",
+   "amount": 200.0,
+   "description": "floor cleaner",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-28",
+   "amount": 170.0,
+   "description": "lamp",
+   "category": "Gifts",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-28",
+   "amount": 450.0,
+   "description": "fruits",
+   "category": "gym",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-29",
+   "amount": 140.0,
+   "description": "roll fasos",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-29",
+   "amount": 274.0,
+   "description": "sardar baksh",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-28",
+   "amount": 75.0,
+   "description": "aata",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2023-09-28",
+   "amount": 120.0,
+   "description": "Thalairaj",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-01",
+   "amount": 29000.0,
+   "description": "Rent",
+   "category": "Home",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-05-30",
+   "amount": 175323.0,
+   "description": "Paycheck",
+   "category": "Paycheck",
+   "kind": "income",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-01",
+   "amount": 30000.0,
+   "description": "PPFC",
+   "category": "SIP",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-01",
+   "amount": 625.0,
+   "description": "Cleaning carpentry",
+   "category": "Home",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-01",
+   "amount": 1439.0,
+   "description": "bucket etc",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-01",
+   "amount": 700.0,
+   "description": "lamp",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-07",
+   "amount": 4000.0,
+   "description": "HOME CENTRE",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-05",
+   "amount": 284.0,
+   "description": "burger rm",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-04",
+   "amount": 262.0,
+   "description": "swiggy",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-03",
+   "amount": 776.0,
+   "description": "swiggy",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-09",
+   "amount": 811.0,
+   "description": "swiggy trail mix",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-03",
+   "amount": 312.0,
+   "description": "blinkit",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-01",
+   "amount": 351.0,
+   "description": "blinkit",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-04",
+   "amount": 273.0,
+   "description": "amazon snackz",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-01",
+   "amount": 1590.0,
+   "description": "amazon stads pillows",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-03",
+   "amount": 1800.0,
+   "description": "tavaa, kadhai",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-09",
+   "amount": 200.0,
+   "description": "audible",
+   "category": "personal",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-09",
+   "amount": 7000.0,
+   "description": "Setup",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-11",
+   "amount": 617.0,
+   "description": "Groceries bb",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-11",
+   "amount": 235.0,
+   "description": "Groceries swiggy",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-07",
+   "amount": 400.0,
+   "description": "Masala dabba",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-11",
+   "amount": 20000.0,
+   "description": "savings",
+   "category": "SIP",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-12",
+   "amount": 900.0,
+   "description": "gorilla barfare",
+   "category": "Dancing juice",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-12",
+   "amount": 255.0,
+   "description": "Auto to baani",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-12",
+   "amount": 400.0,
+   "description": "yogamat",
+   "category": "Personal",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-12",
+   "amount": 50.0,
+   "description": "knife",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-17",
+   "amount": 340.0,
+   "description": "Toiletries",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-07-17",
+   "amount": 236.0,
+   "description": "Onion paneer",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-07-01"
+  },
+  {
+   "date": "2026-06-01",
+   "amount": 19500.0,
+   "description": "Rent",
+   "category": "Home",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-01",
+   "amount": 400.0,
+   "description": "water bottle",
+   "category": "Personal",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-01",
+   "amount": 38.0,
+   "description": "rubberbands",
+   "category": "Personal",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-01",
+   "amount": 55.0,
+   "description": "auto",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-01",
+   "amount": 3427.0,
+   "description": "Freshco setup",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-01",
+   "amount": 105.0,
+   "description": "auto to from freshco",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-01",
+   "amount": 100.0,
+   "description": "cab to pg",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-01",
+   "amount": 1200.0,
+   "description": "swiggy home items",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-01",
+   "amount": 283.0,
+   "description": "diffuser",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-02",
+   "amount": 526.0,
+   "description": "thyronorm for 300 days",
+   "category": "gym",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-02",
+   "amount": 768.0,
+   "description": "Snacks swiggy",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-02",
+   "amount": 214.0,
+   "description": "Auto fromDD",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-04",
+   "amount": 355.0,
+   "description": "Zomato",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-06",
+   "amount": 475.0,
+   "description": "HSR Litti and theobroma",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-06",
+   "amount": 4200.0,
+   "description": "cloths",
+   "category": "Personal",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-06",
+   "amount": 350.0,
+   "description": "Burger king",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-06",
+   "amount": 330.0,
+   "description": "auto to vega coty",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-06",
+   "amount": 7000.0,
+   "description": "Furniture",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-08",
+   "amount": 30000.0,
+   "description": "PPFC fund",
+   "category": "SIP",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-10",
+   "amount": 4930.0,
+   "description": "Goa shop",
+   "category": "Dancing juice",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-13",
+   "amount": 1000.0,
+   "description": "unstamart",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-13",
+   "amount": 326.0,
+   "description": "Fruits",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-20",
+   "amount": 354.0,
+   "description": "Fruits",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-20",
+   "amount": 330.0,
+   "description": "Movie Vega city",
+   "category": "entertainment",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-20",
+   "amount": 200.0,
+   "description": "Pizza",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-20",
+   "amount": 370.0,
+   "description": "Auto to movie",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-02",
+   "amount": 280.0,
+   "description": "waffles",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-02",
+   "amount": 320.0,
+   "description": "Juice",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-20",
+   "amount": 250.0,
+   "description": "popcorn rex",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2029-06-21",
+   "amount": 350.0,
+   "description": "Aradhika dinner",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-21",
+   "amount": 3004.0,
+   "description": "Westside",
+   "category": "Personal",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-21",
+   "amount": 500.0,
+   "description": "Auto to DD",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-27",
+   "amount": 253.0,
+   "description": "Groceries  swiggy",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-27",
+   "amount": 243.0,
+   "description": "Bookmyshow ministry of comedy",
+   "category": "entertainment",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-28",
+   "amount": 45.0,
+   "description": "Cocktail 2",
+   "category": "entertainment",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-27",
+   "amount": 346.0,
+   "description": "Auto to comedy club",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-28",
+   "amount": 365.0,
+   "description": "Nachos",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-28",
+   "amount": 370.0,
+   "description": "3rd wave cafe",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2016-06-28",
+   "amount": 150.0,
+   "description": "Auto",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2026-06-30",
+   "amount": 20000.0,
+   "description": "Saving for sip",
+   "category": "SIP",
+   "kind": "expense",
+   "month": "2026-06-01"
+  },
+  {
+   "date": "2024-01-01",
+   "amount": 10700.0,
+   "description": "Rent",
+   "category": "Home",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2023-01-09",
+   "amount": 79400.0,
+   "description": "Paycheck",
+   "category": "Paycheck",
+   "kind": "income",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2024-01-01",
+   "amount": 100.0,
+   "description": "momos",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2024-01-01",
+   "amount": 392.0,
+   "description": "cab from igi",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2024-01-01",
+   "amount": 850.0,
+   "description": "smart grocerie",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2024-01-01",
+   "amount": 500.0,
+   "description": "shampoo facewash pads",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2024-01-02",
+   "amount": 700.0,
+   "description": "chillies",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2024-01-02",
+   "amount": 438.5,
+   "description": "Al kauzar",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2024-01-02",
+   "amount": 750.0,
+   "description": "new year party",
+   "category": "Dancing juice",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2024-01-04",
+   "amount": 30000.0,
+   "description": "SIP",
+   "category": "SIP",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2024-01-09",
+   "amount": 5000.0,
+   "description": "emergency ",
+   "category": "Savings",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2024-01-03",
+   "amount": 1.0,
+   "description": "just in case",
+   "category": "gym",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2024-01-04",
+   "amount": 400.0,
+   "description": "fruits",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2024-01-05",
+   "amount": 750.0,
+   "description": "yu mee",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2024-01-06",
+   "amount": 103.0,
+   "description": "auto to Alkauzar",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2024-01-07",
+   "amount": 30.0,
+   "description": "Vegetables",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2024-01-03",
+   "amount": 178.0,
+   "description": "Sardar Baksh",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2024-01-03",
+   "amount": 1946.0,
+   "description": "Hair drier+warmers",
+   "category": "Personal",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2024-01-03",
+   "amount": 1845.0,
+   "description": "uniqlo jacket",
+   "category": "Personal",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2024-01-03",
+   "amount": 175.0,
+   "description": "mashmallows",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2024-01-03",
+   "amount": 120.0,
+   "description": "candles",
+   "category": "Home",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2024-01-20",
+   "amount": 177.0,
+   "description": "call chotu zomato",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2026-01-01"
+  },
+  {
+   "date": "2023-10-01",
+   "amount": 11750.0,
+   "description": "Rent",
+   "category": "Home",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-01",
+   "amount": 212.0,
+   "description": "nic bakers",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-01",
+   "amount": 350.0,
+   "description": "chillis",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-01",
+   "amount": 351.0,
+   "description": "nomad",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-01",
+   "amount": 200.0,
+   "description": "ice cream ",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-01",
+   "amount": 200.0,
+   "description": "cyber city and back",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-01",
+   "amount": 1000.0,
+   "description": "Baeleys ",
+   "category": "Dancing juice",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-01",
+   "amount": 120.0,
+   "description": "sultan al arab",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-02",
+   "amount": 2000.0,
+   "description": "Anju",
+   "category": "Home",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-02",
+   "amount": 100.0,
+   "description": "garbage guy",
+   "category": "Home",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-02",
+   "amount": 1705.0,
+   "description": "electric ",
+   "category": "electric",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-02",
+   "amount": 30000.0,
+   "description": "SIP",
+   "category": "SIP",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-02",
+   "amount": 5000.0,
+   "description": "emergency ",
+   "category": "Savings",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-02",
+   "amount": 1.0,
+   "description": "just in case",
+   "category": "Travel",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-02",
+   "amount": 340.0,
+   "description": "vegetables ",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-02",
+   "amount": 325.0,
+   "description": "HKV",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-02",
+   "amount": 86.0,
+   "description": "auto to HKV",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-03",
+   "amount": 262.0,
+   "description": "fruits",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-03",
+   "amount": 577.0,
+   "description": "aradhika burger and mochi",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-03",
+   "amount": 99.0,
+   "description": "onion",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-04",
+   "amount": 200.0,
+   "description": "snacks malkist bingo",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-05",
+   "amount": 566.0,
+   "description": "purse baggit",
+   "category": "Gifts",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-04",
+   "amount": 100.0,
+   "description": "fix pump",
+   "category": "Home",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-06",
+   "amount": 385.0,
+   "description": "burger",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-07",
+   "amount": 900.0,
+   "description": "yu mee",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-07",
+   "amount": 105.0,
+   "description": "mirror",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-07",
+   "amount": 100.0,
+   "description": "auto from GK",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-07",
+   "amount": 100.0,
+   "description": "fries",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-08",
+   "amount": 125.0,
+   "description": "apples bread milk",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-08",
+   "amount": 32.0,
+   "description": "biscuit orange",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-09",
+   "amount": 50.0,
+   "description": "hot chocolate",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-10",
+   "amount": 200.0,
+   "description": "big chill ",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-10",
+   "amount": 150.0,
+   "description": "ginger buscuit paneer",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-10",
+   "amount": 450.0,
+   "description": "papaya",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-10",
+   "amount": 60.0,
+   "description": "auto to mall",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-10",
+   "amount": 650.0,
+   "description": "padi",
+   "category": "Personal",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-10",
+   "amount": 48.0,
+   "description": "nirula",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-10",
+   "amount": 100.0,
+   "description": "breakfast",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-14",
+   "amount": 104.5,
+   "description": "Vegetables ",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-15",
+   "amount": 6922.0,
+   "description": "hotel",
+   "category": "Travel",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-16",
+   "amount": 855.0,
+   "description": "train",
+   "category": "Travel",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-17",
+   "amount": 745.0,
+   "description": "train back",
+   "category": "Travel",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-18",
+   "amount": 93.0,
+   "description": "mall falafel",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-19",
+   "amount": 150.0,
+   "description": "kulfi ",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-20",
+   "amount": 45.0,
+   "description": "auto to and from mall ",
+   "category": "Transportation",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-21",
+   "amount": 65.0,
+   "description": "lock",
+   "category": "Home",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-22",
+   "amount": 30.0,
+   "description": "prerolls",
+   "category": "Dancing juice",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-23",
+   "amount": 15.0,
+   "description": "dish soap",
+   "category": "Utilities",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-24",
+   "amount": 102.0,
+   "description": "vegetables ",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-25",
+   "amount": 70.0,
+   "description": "train munchies ",
+   "category": "snacks",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-26",
+   "amount": 1000.0,
+   "description": "cab",
+   "category": "Travel",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-27",
+   "amount": 2000.0,
+   "description": "massage",
+   "category": "Travel",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-28",
+   "amount": 1000.0,
+   "description": "travel eat out",
+   "category": "Dine out",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-29",
+   "amount": 300.0,
+   "description": "kurta",
+   "category": "Gifts",
+   "kind": "expense",
+   "month": "2025-10-01"
+  },
+  {
+   "date": "2023-10-30",
+   "amount": 150.0,
+   "description": "snacks bigbasket",
+   "category": "groceries",
+   "kind": "expense",
+   "month": "2025-10-01"
+  }
+ ],
+ "budgets": [
+  {
+   "month": "2026-06-01",
+   "category": "Dine out",
+   "planned": 5000.0
+  },
+  {
+   "month": "2026-06-01",
+   "category": "EMI",
+   "planned": 1.0
+  },
+  {
+   "month": "2026-06-01",
+   "category": "Dancing juice",
+   "planned": 1000.0
+  },
+  {
+   "month": "2026-06-01",
+   "category": "Home",
+   "planned": 19500.0
+  },
+  {
+   "month": "2026-06-01",
+   "category": "Transportation",
+   "planned": 4000.0
+  },
+  {
+   "month": "2026-06-01",
+   "category": "Personal",
+   "planned": 4000.0
+  },
+  {
+   "month": "2026-06-01",
+   "category": "gym",
+   "planned": 1500.0
+  },
+  {
+   "month": "2026-06-01",
+   "category": "Utilities",
+   "planned": 10000.0
+  },
+  {
+   "month": "2026-06-01",
+   "category": "Travel",
+   "planned": 5000.0
+  },
+  {
+   "month": "2026-06-01",
+   "category": "Savings",
+   "planned": 1.0
+  },
+  {
+   "month": "2026-06-01",
+   "category": "electric",
+   "planned": 1.0
+  },
+  {
+   "month": "2026-06-01",
+   "category": "SIP",
+   "planned": 50000.0
+  },
+  {
+   "month": "2026-06-01",
+   "category": "Entertainment",
+   "planned": 4000.0
+  },
+  {
+   "month": "2026-06-01",
+   "category": "groceries",
+   "planned": 6000.0
+  },
+  {
+   "month": "2026-06-01",
+   "category": "snacks",
+   "planned": 2000.0
+  },
+  {
+   "month": "2026-01-01",
+   "category": "Dine out",
+   "planned": 7000.0
+  },
+  {
+   "month": "2026-01-01",
+   "category": "Gifts",
+   "planned": 2000.0
+  },
+  {
+   "month": "2026-01-01",
+   "category": "Dancing juice",
+   "planned": 1000.0
+  },
+  {
+   "month": "2026-01-01",
+   "category": "Home",
+   "planned": 14000.0
+  },
+  {
+   "month": "2026-01-01",
+   "category": "Transportation",
+   "planned": 600.0
+  },
+  {
+   "month": "2026-01-01",
+   "category": "Personal",
+   "planned": 4000.0
+  },
+  {
+   "month": "2026-01-01",
+   "category": "gym",
+   "planned": 1.0
+  },
+  {
+   "month": "2026-01-01",
+   "category": "Utilities",
+   "planned": 1000.0
+  },
+  {
+   "month": "2026-01-01",
+   "category": "Travel",
+   "planned": 8000.0
+  },
+  {
+   "month": "2026-01-01",
+   "category": "Savings",
+   "planned": 5000.0
+  },
+  {
+   "month": "2026-01-01",
+   "category": "electric",
+   "planned": 2000.0
+  },
+  {
+   "month": "2026-01-01",
+   "category": "SIP",
+   "planned": 30000.0
+  },
+  {
+   "month": "2026-01-01",
+   "category": "entertainment",
+   "planned": 800.0
+  },
+  {
+   "month": "2026-01-01",
+   "category": "groceries",
+   "planned": 3000.0
+  },
+  {
+   "month": "2026-01-01",
+   "category": "snacks",
+   "planned": 1000.0
+  },
+  {
+   "month": "2025-10-01",
+   "category": "Dine out",
+   "planned": 7000.0
+  },
+  {
+   "month": "2025-10-01",
+   "category": "Gifts",
+   "planned": 2000.0
+  },
+  {
+   "month": "2025-10-01",
+   "category": "Dancing juice",
+   "planned": 1000.0
+  },
+  {
+   "month": "2025-10-01",
+   "category": "Home",
+   "planned": 14000.0
+  },
+  {
+   "month": "2025-10-01",
+   "category": "Transportation",
+   "planned": 600.0
+  },
+  {
+   "month": "2025-10-01",
+   "category": "Personal",
+   "planned": 4000.0
+  },
+  {
+   "month": "2025-10-01",
+   "category": "gym",
+   "planned": 1.0
+  },
+  {
+   "month": "2025-10-01",
+   "category": "Utilities",
+   "planned": 1000.0
+  },
+  {
+   "month": "2025-10-01",
+   "category": "Travel",
+   "planned": 8000.0
+  },
+  {
+   "month": "2025-10-01",
+   "category": "Savings",
+   "planned": 5000.0
+  },
+  {
+   "month": "2025-10-01",
+   "category": "electric",
+   "planned": 2000.0
+  },
+  {
+   "month": "2025-10-01",
+   "category": "SIP",
+   "planned": 30000.0
+  },
+  {
+   "month": "2025-10-01",
+   "category": "entertainment",
+   "planned": 800.0
+  },
+  {
+   "month": "2025-10-01",
+   "category": "groceries",
+   "planned": 3000.0
+  },
+  {
+   "month": "2025-10-01",
+   "category": "snacks",
+   "planned": 1000.0
+  }
+ ],
+ "shopping": [
+  {
+   "list": "personal",
+   "name": "Jar",
+   "priority": 22.0,
+   "cost": 400.0
+  },
+  {
+   "list": "grocery",
+   "name": "apple",
+   "priority": 4.0,
+   "cost": 200.0
+  },
+  {
+   "list": "personal",
+   "name": "dumbells",
+   "priority": 12.0,
+   "cost": 4000.0
+  },
+  {
+   "list": "personal",
+   "name": "lamp",
+   "priority": 11.0,
+   "cost": 1000.0
+  },
+  {
+   "list": "personal",
+   "name": "wall art",
+   "priority": 10.0,
+   "cost": 1000.0
+  },
+  {
+   "list": "personal",
+   "name": "keyholder",
+   "priority": 20.0,
+   "cost": 500.0
+  },
+  {
+   "list": "personal",
+   "name": "plant/fake",
+   "priority": 2.0,
+   "cost": 300.0
+  },
+  {
+   "list": "personal",
+   "name": "diffuser",
+   "priority": 6.0,
+   "cost": 600.0
+  },
+  {
+   "list": "personal",
+   "name": "bras",
+   "priority": 4.0,
+   "cost": 400.0
+  },
+  {
+   "list": "personal",
+   "name": "tongue cleaner",
+   "priority": 7.0,
+   "cost": 100.0
+  },
+  {
+   "list": "personal",
+   "name": "clock",
+   "priority": 8.0,
+   "cost": 200.0
+  },
+  {
+   "list": "personal",
+   "name": "shirt",
+   "priority": 9.0,
+   "cost": 900.0
+  },
+  {
+   "list": "personal",
+   "name": "Gym shirts",
+   "priority": 1.5,
+   "cost": 1200.0
+  },
+  {
+   "list": "personal",
+   "name": "wood stain",
+   "priority": 9.5,
+   "cost": 100.0
+  },
+  {
+   "list": "personal",
+   "name": "onion potato container",
+   "priority": 7.5,
+   "cost": 180.0
+  },
+  {
+   "list": "personal",
+   "name": "Sunscreen",
+   "priority": 1.5,
+   "cost": 500.0
+  }
+ ],
+ "wishlist": [
+  {
+   "name": "towel",
+   "cost": 160.0,
+   "priority": 1.0,
+   "status": "to buy"
+  },
+  {
+   "name": "scent",
+   "cost": 400.0,
+   "priority": 2.0,
+   "status": "done"
+  },
+  {
+   "name": "sketchers",
+   "cost": 4000.0,
+   "priority": 1.0,
+   "status": "done"
+  },
+  {
+   "name": "gift for mother",
+   "cost": 2000.0,
+   "priority": 2.0,
+   "status": "done"
+  },
+  {
+   "name": "bathrobe",
+   "cost": 1000.0,
+   "priority": 4.0,
+   "status": "to buy"
+  },
+  {
+   "name": "cushion cover",
+   "cost": 500.0,
+   "priority": 6.0,
+   "status": "to buy"
+  },
+  {
+   "name": "glass jars",
+   "cost": 1000.0,
+   "priority": 4.0,
+   "status": "to buy"
+  },
+  {
+   "name": "kindle",
+   "cost": 10000.0,
+   "priority": 5.0,
+   "status": "to buy"
+  },
+  {
+   "name": "trip",
+   "cost": 30000.0,
+   "priority": 3.0,
+   "status": "done"
+  }
+ ],
+ "trip_budgets": [
+  {
+   "name": "manali",
+   "travel": 2000.0,
+   "visa": 0,
+   "hotel_per_night": 1700.0,
+   "transport_per_day": 500.0,
+   "food_per_day": 1000.0,
+   "activities_per_day": 500.0,
+   "stay_length": 2.0
+  },
+  {
+   "name": "bangalore",
+   "travel": 12000.0,
+   "visa": 0,
+   "hotel_per_night": 2500.0,
+   "transport_per_day": 500.0,
+   "food_per_day": 2000.0,
+   "activities_per_day": 500.0,
+   "stay_length": 3.0
+  },
+  {
+   "name": "sri lanka",
+   "travel": 25000.0,
+   "visa": 2000.0,
+   "hotel_per_night": 2500.0,
+   "transport_per_day": 1000.0,
+   "food_per_day": 2000.0,
+   "activities_per_day": 1000.0,
+   "stay_length": 3.0
+  },
+  {
+   "name": "thailand",
+   "travel": 35000.0,
+   "visa": 2000.0,
+   "hotel_per_night": 3000.0,
+   "transport_per_day": 1000.0,
+   "food_per_day": 2000.0,
+   "activities_per_day": 1000.0,
+   "stay_length": 3.0
+  }
+ ],
+ "shopping_budgets": {
+  "personal": 7456.0,
+  "grocery": 7943.0
+ }
+}
