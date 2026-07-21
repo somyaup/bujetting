@@ -1,7 +1,8 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-import { useCategories, useProfile, useAllTransactions } from "@/lib/queries";
+import { useCategories, useProfile, useAllTransactions, useBudgets } from "@/lib/queries";
+import { currentMonthKey } from "@/lib/format";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -18,12 +19,16 @@ export const Route = createFileRoute("/_authenticated/settings")({
 function SettingsPage() {
   const qc = useQueryClient();
   const nav = useNavigate();
+  const monthKey = currentMonthKey(); // e.g. "2026-07-01"
   const { data: profile } = useProfile();
   const { data: cats = [] } = useCategories();
+  const { data: budgets = [] } = useBudgets(monthKey);
   const { data: allTxns = [] } = useAllTransactions();
   const [newCat, setNewCat] = useState("");
   const [newFixed, setNewFixed] = useState(false);
   const [newBudget, setNewBudget] = useState(0);
+
+  const budgetByCategory = new Map(budgets.map((b) => [b.category_id, b]));
 
   const updateProfile = useMutation({
     mutationFn: async (patch: Partial<{ currency: string; display_name: string }>) => {
@@ -31,15 +36,17 @@ function SettingsPage() {
       if (error) throw error;
     },
     onSuccess: () => { qc.invalidateQueries({ queryKey: ["profile"] }); toast.success("Saved"); },
+    onError: (e) => toast.error(e instanceof Error ? e.message : "Couldn't save profile"),
   });
 
   const addCat = useMutation({
     mutationFn: async () => {
       const { data: u } = await supabase.auth.getUser();
+      if (!u.user) throw new Error("Not signed in");
       const { data: category, error } = await supabase
         .from("categories")
         .insert({
-            user_id: u.user!.id,
+            user_id: u.user.id,
             name: newCat,
             is_fixed: newFixed,
         })
@@ -47,13 +54,11 @@ function SettingsPage() {
         .single();
       if (error) throw error;
 
-      // Also save the starting monthly budget for this category, if one was given.
       if (newBudget > 0) {
-        const monthKey = `${new Date().toISOString().slice(0, 7)}-01`; // e.g. "2026-07-01"
         const { error: budgetError } = await supabase
           .from("budgets")
           .upsert({
-            user_id: u.user!.id,
+            user_id: u.user.id,
             month: monthKey,
             category_id: category.id,
             planned_amount: newBudget,
@@ -65,7 +70,24 @@ function SettingsPage() {
       qc.invalidateQueries({ queryKey: ["categories"] });
       qc.invalidateQueries({ queryKey: ["budgets"] });
       setNewCat(""); setNewFixed(false); setNewBudget(0);
+      toast.success("Category added");
     },
+    onError: (e) => toast.error(e instanceof Error ? e.message : "Couldn't add category — check it isn't a duplicate name"),
+  });
+
+  // Editing the budget on an EXISTING category (separate from the create-new-category form above).
+  const setBudget = useMutation({
+    mutationFn: async ({ categoryId, amount }: { categoryId: string; amount: number }) => {
+      const { data: u } = await supabase.auth.getUser();
+      if (!u.user) throw new Error("Not signed in");
+      const { error } = await supabase
+        .from("budgets")
+        .upsert({ user_id: u.user.id, month: monthKey, category_id: categoryId, planned_amount: amount },
+          { onConflict: "user_id,category_id,month" });
+      if (error) throw error;
+    },
+    onSuccess: () => { qc.invalidateQueries({ queryKey: ["budgets"] }); toast.success("Budget updated"); },
+    onError: (e) => toast.error(e instanceof Error ? e.message : "Couldn't update budget"),
   });
 
   const toggleFixed = useMutation({
@@ -74,11 +96,16 @@ function SettingsPage() {
       if (error) throw error;
     },
     onSuccess: () => qc.invalidateQueries({ queryKey: ["categories"] }),
+    onError: (e) => toast.error(e instanceof Error ? e.message : "Couldn't update category"),
   });
 
   const archiveCat = useMutation({
-    mutationFn: async (id: string) => { await supabase.from("categories").update({ archived: true }).eq("id", id); },
+    mutationFn: async (id: string) => {
+      const { error } = await supabase.from("categories").update({ archived: true }).eq("id", id);
+      if (error) throw error;
+    },
     onSuccess: () => qc.invalidateQueries({ queryKey: ["categories"] }),
+    onError: (e) => toast.error(e instanceof Error ? e.message : "Couldn't remove category"),
   });
 
   const signOut = async () => {
@@ -116,20 +143,31 @@ function SettingsPage() {
 
       <Card className="glass-card p-5 space-y-4">
         <h3 className="font-display text-lg">Categories</h3>
-        <p className="text-xs text-muted-foreground">Fixed categories (Rent, SIP, EMIs) are excluded from the daily spending pace.</p>
+        <p className="text-xs text-muted-foreground">Fixed categories (Rent, SIP, EMIs) are excluded from the daily spending pace. Budgets shown are for the current month.</p>
         <div className="flex gap-2">
           <Input placeholder="New category" value={newCat} onChange={(e) => setNewCat(e.target.value)} />
-          <Input type="number" placeholder="Monthly Budget" value={newBudget} onChange={(e) => setNewBudget(Number(e.target.value))} />
+          <Input type="number" placeholder="Monthly Budget" value={newBudget || ""} onChange={(e) => setNewBudget(Number(e.target.value))} />
           <label className="flex items-center gap-1.5 text-xs text-muted-foreground shrink-0">
             <input type="checkbox" checked={newFixed} onChange={(e) => setNewFixed(e.target.checked)} /> Fixed
           </label>
-          <Button onClick={() => newCat && addCat.mutate()}><Plus className="w-4 h-4" /></Button>
+          <Button onClick={() => newCat.trim() && addCat.mutate()} disabled={addCat.isPending}><Plus className="w-4 h-4" /></Button>
         </div>
         <div className="divide-y divide-border/60">
           {cats.map((c) => (
             <div key={c.id} className="flex items-center gap-3 py-2">
               <span className="flex-1">{c.name}</span>
               {c.is_fixed && <Badge variant="outline" className="bg-accent/15 text-accent border-accent/40">Fixed</Badge>}
+              <Input
+                type="number"
+                className="w-28 h-8 text-sm"
+                placeholder="Budget"
+                defaultValue={budgetByCategory.get(c.id)?.planned_amount ?? ""}
+                key={budgetByCategory.get(c.id)?.planned_amount ?? "empty"}
+                onBlur={(e) => {
+                  const amount = Number(e.target.value);
+                  if (!Number.isNaN(amount)) setBudget.mutate({ categoryId: c.id, amount });
+                }}
+              />
               <button onClick={() => toggleFixed.mutate({ id: c.id, is_fixed: !c.is_fixed })} className="text-xs text-muted-foreground hover:text-foreground">
                 {c.is_fixed ? "Mark variable" : "Mark fixed"}
               </button>
