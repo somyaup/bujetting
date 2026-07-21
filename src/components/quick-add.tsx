@@ -53,7 +53,12 @@ export function QuickAdd({ open, onOpenChange }: { open: boolean; onOpenChange: 
       setAmount(""); setDescription(""); setCategoryId("");
       onOpenChange(false);
     },
-    onError: (e) => toast.error(e instanceof Error ? e.message : "Failed"),
+    onError: (e) => {
+      const msg = e instanceof Error ? e.message : "Failed";
+      toast.error(msg.includes("transactions_dedupe")
+        ? "You've already got an identical entry (same date, amount, description) — tweak one of those if this is meant to be separate."
+        : msg);
+    },
   });
 
   return (

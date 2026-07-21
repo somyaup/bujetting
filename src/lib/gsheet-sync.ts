@@ -153,12 +153,13 @@ async function doPullFromSheet(sheetUrl: string): Promise<{ imported: number }> 
   if (!userData.user) throw new Error("Not signed in");
   const userId = userData.user.id;
 
-  // Only compare against previously-imported rows to keep this cheap and to
-  // never touch transactions you entered by hand in the app.
+  // Compare against every existing transaction, not just previously-imported
+  // ones — a manual entry gets pushed to the sheet too (see quick-add.tsx),
+  // so without this check the next sync would read it straight back out of
+  // the sheet and create a second copy of it.
   const { data: existingImports } = await supabase
     .from("transactions")
-    .select("occurred_on, amount, description, kind")
-    .eq("source", "import");
+    .select("occurred_on, amount, description, kind");
   const existingKeys = new Set(
     (existingImports ?? []).map((t) => `${t.occurred_on}|${t.amount}|${t.description ?? ""}|${t.kind}`),
   );
