@@ -5,12 +5,14 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sh
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { useCategories } from "@/lib/queries";
+import { useCategories, useProfile } from "@/lib/queries";
+import { pushToSheet } from "@/lib/gsheet-sync";
 import { toast } from "sonner";
 
 export function QuickAdd({ open, onOpenChange }: { open: boolean; onOpenChange: (v: boolean) => void }) {
   const qc = useQueryClient();
   const { data: cats } = useCategories();
+  const { data: profile } = useProfile();
   const [amount, setAmount] = useState("");
   const [description, setDescription] = useState("");
   const [categoryId, setCategoryId] = useState<string>("");
@@ -33,6 +35,17 @@ export function QuickAdd({ open, onOpenChange }: { open: boolean; onOpenChange: 
         source: "manual",
       });
       if (error) throw error;
+
+      if (profile?.gsheet_apps_script_url) {
+        const categoryName = filtered.find((c) => c.id === categoryId)?.name ?? null;
+        void pushToSheet(profile.gsheet_apps_script_url, {
+          kind,
+          occurred_on: date,
+          amount: Number(amount),
+          description: description || null,
+          categoryName,
+        });
+      }
     },
     onSuccess: () => {
       toast.success("Added");

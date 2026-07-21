@@ -3,13 +3,14 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { useCategories, useProfile, useAllTransactions, useBudgets } from "@/lib/queries";
 import { currentMonthKey } from "@/lib/format";
+import { pullFromSheet } from "@/lib/gsheet-sync";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
 import { toast } from "sonner";
-import { LogOut, Download, Trash2, Plus } from "lucide-react";
+import { LogOut, Download, Trash2, Plus, RefreshCw } from "lucide-react";
 
 export const Route = createFileRoute("/_authenticated/settings")({
   head: () => ({ meta: [{ title: "Settings — Ledgerly" }] }),
@@ -31,12 +32,25 @@ function SettingsPage() {
   const budgetByCategory = new Map(budgets.map((b) => [b.category_id, b]));
 
   const updateProfile = useMutation({
-    mutationFn: async (patch: Partial<{ currency: string; display_name: string }>) => {
+    mutationFn: async (patch: Partial<{ currency: string; display_name: string; gsheet_url: string; gsheet_apps_script_url: string }>) => {
       const { error } = await supabase.from("profiles").update(patch).eq("id", profile!.id);
       if (error) throw error;
     },
     onSuccess: () => { qc.invalidateQueries({ queryKey: ["profile"] }); toast.success("Saved"); },
     onError: (e) => toast.error(e instanceof Error ? e.message : "Couldn't save profile"),
+  });
+
+  const syncNow = useMutation({
+    mutationFn: async () => {
+      if (!profile?.gsheet_url) throw new Error("Add your sheet link first");
+      return pullFromSheet(profile.gsheet_url);
+    },
+    onSuccess: (r) => {
+      qc.invalidateQueries({ queryKey: ["transactions"] });
+      qc.invalidateQueries({ queryKey: ["profile"] });
+      toast.success(r.imported ? `Imported ${r.imported} new row(s)` : "Already up to date");
+    },
+    onError: (e) => toast.error(e instanceof Error ? e.message : "Sync failed"),
   });
 
   const addCat = useMutation({
@@ -138,6 +152,33 @@ function SettingsPage() {
           <div><label className="text-xs text-muted-foreground">Currency</label>
             <Input defaultValue={profile?.currency ?? "INR"} onBlur={(e) => updateProfile.mutate({ currency: e.target.value.toUpperCase() })} />
           </div>
+        </div>
+      </Card>
+
+      <Card className="glass-card p-5 space-y-4">
+        <div className="flex items-center justify-between">
+          <h3 className="font-display text-lg">Google Sheet sync</h3>
+          <Button size="sm" variant="secondary" onClick={() => syncNow.mutate()} disabled={syncNow.isPending || !profile?.gsheet_url}>
+            <RefreshCw className={`w-4 h-4 mr-1.5 ${syncNow.isPending ? "animate-spin" : ""}`} /> Sync now
+          </Button>
+        </div>
+        <div className="space-y-3">
+          <div>
+            <label className="text-xs text-muted-foreground">Sheet link (Share → Anyone with the link – Viewer)</label>
+            <Input placeholder="https://docs.google.com/spreadsheets/d/..." defaultValue={profile?.gsheet_url ?? ""}
+              onBlur={(e) => updateProfile.mutate({ gsheet_url: e.target.value.trim() })} />
+          </div>
+          <div>
+            <label className="text-xs text-muted-foreground">Apps Script web app URL (for writing new entries back to the sheet)</label>
+            <Input placeholder="https://script.google.com/macros/s/.../exec" defaultValue={profile?.gsheet_apps_script_url ?? ""}
+              onBlur={(e) => updateProfile.mutate({ gsheet_apps_script_url: e.target.value.trim() })} />
+          </div>
+          <p className="text-xs text-muted-foreground">
+            {profile?.gsheet_last_synced_at
+              ? `Last synced ${new Date(profile.gsheet_last_synced_at).toLocaleString()}`
+              : "Not synced yet"}
+            {" — "}the app also syncs automatically every couple of minutes while it's open.
+          </p>
         </div>
       </Card>
 

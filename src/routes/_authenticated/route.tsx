@@ -2,7 +2,9 @@ import { createFileRoute, Outlet, redirect, Link, useRouterState, useNavigate } 
 import { useEffect } from "react";
 import { useQueryClient, useMutation } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
+import { ensureSignedIn } from "@/lib/auto-auth";
 import { seedFromWorkbook } from "@/lib/seed.functions";
+import { pullFromSheet } from "@/lib/gsheet-sync";
 import { LayoutDashboard, Receipt, ShoppingBag, LineChart, Settings, Plus, LogOut, Wallet } from "lucide-react";
 import { QuickAdd } from "@/components/quick-add";
 import { useState } from "react";
@@ -11,9 +13,12 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/_authenticated")({
   ssr: false,
   beforeLoad: async () => {
-    const { data, error } = await supabase.auth.getUser();
-    if (error || !data.user) throw redirect({ to: "/auth" });
-    return { user: data.user };
+    try {
+      const session = await ensureSignedIn();
+      return { user: session.user };
+    } catch {
+      throw redirect({ to: "/auth" });
+    }
   },
   component: AppShell,
 });
@@ -40,6 +45,30 @@ function AppShell() {
   });
 
   useEffect(() => { seedMut.mutate(); /* one-time on shell mount */ // eslint-disable-next-line
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    const trySync = async () => {
+      const { data: u } = await supabase.auth.getUser();
+      if (!u.user) return;
+      const { data: profile } = await supabase.from("profiles").select("gsheet_url").eq("id", u.user.id).maybeSingle();
+      if (cancelled || !profile?.gsheet_url) return;
+      try {
+        const r = await pullFromSheet(profile.gsheet_url);
+        if (!cancelled && r.imported) {
+          queryClient.invalidateQueries({ queryKey: ["transactions"] });
+          queryClient.invalidateQueries({ queryKey: ["profile"] });
+        }
+      } catch {
+        // Silent — background sync shouldn't interrupt the app; the Settings
+        // page surfaces errors when the user syncs manually instead.
+      }
+    };
+    void trySync();
+    const interval = setInterval(trySync, 2 * 60 * 1000);
+    return () => { cancelled = true; clearInterval(interval); };
+    // eslint-disable-next-line
   }, []);
 
   const signOut = async () => {

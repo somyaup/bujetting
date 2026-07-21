@@ -192,6 +192,9 @@ export type Database = {
           created_at: string
           currency: string
           display_name: string | null
+          gsheet_apps_script_url: string | null
+          gsheet_last_synced_at: string | null
+          gsheet_url: string | null
           id: string
           seeded_at: string | null
           starting_balance: number
@@ -202,6 +205,9 @@ export type Database = {
           created_at?: string
           currency?: string
           display_name?: string | null
+          gsheet_apps_script_url?: string | null
+          gsheet_last_synced_at?: string | null
+          gsheet_url?: string | null
           id: string
           seeded_at?: string | null
           starting_balance?: number
@@ -212,6 +218,9 @@ export type Database = {
           created_at?: string
           currency?: string
           display_name?: string | null
+          gsheet_apps_script_url?: string | null
+          gsheet_last_synced_at?: string | null
+          gsheet_url?: string | null
           id?: string
           seeded_at?: string | null
           starting_balance?: number
