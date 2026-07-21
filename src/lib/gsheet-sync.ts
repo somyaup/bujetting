@@ -170,15 +170,22 @@ async function doPullFromSheet(sheetUrl: string): Promise<{ imported: number }> 
     const key = `${p.occurred_on}|${p.amount}|${p.description ?? ""}|${p.kind}`;
     if (existingKeys.has(key)) continue;
     const category_id = p.categoryName ? await findOrCreateCategoryId(catCache, userId, p.categoryName, p.kind) : null;
-    const { error } = await supabase.from("transactions").insert({
-      user_id: userId,
-      occurred_on: p.occurred_on,
-      amount: p.amount,
-      kind: p.kind,
-      description: p.description,
-      category_id,
-      source: "import",
-    });
+    // --- NEW CODE (REPLACE WITH THIS) ---
+    const { error } = await supabase.from("transactions").upsert(
+      {
+        user_id: userId,
+        occurred_on: p.occurred_on,
+        amount: p.amount,
+        kind: p.kind,
+        description: p.description,
+        category_id,
+        source: "import",
+      },
+      {
+        onConflict: "user_id,occurred_on,amount,kind,description",
+        ignoreDuplicates: true,
+      }
+    );
     if (!error) { imported++; existingKeys.add(key); }
   }
 
