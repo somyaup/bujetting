@@ -24,7 +24,7 @@ function SettingsPage() {
   const [newCat, setNewCat] = useState("");
   const [newFixed, setNewFixed] = useState(false);
   const [newBudget, setNewBudget] = useState(0);
-  
+
   const updateProfile = useMutation({
     mutationFn: async (patch: Partial<{ currency: string; display_name: string }>) => {
       const { error } = await supabase.from("profiles").update(patch).eq("id", profile!.id);
@@ -36,7 +36,6 @@ function SettingsPage() {
   const addCat = useMutation({
     mutationFn: async () => {
       const { data: u } = await supabase.auth.getUser();
-      //const { error } = await supabase.from("categories").insert({ user_id: u.user!.id, name: newCat, is_fixed: newFixed });
       const { data: category, error } = await supabase
         .from("categories")
         .insert({
@@ -47,19 +46,28 @@ function SettingsPage() {
         .select()
         .single();
       if (error) throw error;
+
+      // Also save the starting monthly budget for this category, if one was given.
+      if (newBudget > 0) {
+        const monthKey = `${new Date().toISOString().slice(0, 7)}-01`; // e.g. "2026-07-01"
+        const { error: budgetError } = await supabase
+          .from("budgets")
+          .upsert({
+            user_id: u.user!.id,
+            month: monthKey,
+            category_id: category.id,
+            planned_amount: newBudget,
+          });
+        if (budgetError) throw budgetError;
+      }
     },
-    onSuccess: () => { qc.invalidateQueries({ queryKey: ["categories"] }); setNewCat(""); setNewFixed(false);setnewBudget(0); },
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["categories"] });
+      qc.invalidateQueries({ queryKey: ["budgets"] });
+      setNewCat(""); setNewFixed(false); setNewBudget(0);
+    },
   });
-  const monthKey = new Date().toISOString().slice(0,7);
-  // "2026-07"
-  
-  await supabase
-      .from("budgets")
-      .upsert({
-          month: monthKey,
-          category_id: category.id,
-          planned_amount: newBudget,
-      });
+
   const toggleFixed = useMutation({
     mutationFn: async ({ id, is_fixed }: { id: string; is_fixed: boolean }) => {
       const { error } = await supabase.from("categories").update({ is_fixed }).eq("id", id);
