@@ -217,3 +217,36 @@ export async function pushToSheet(
     // Silent — the sheet push is best-effort and shouldn't block the app.
   }
 }
+export type ShoppingItem = {
+  row_index: number;
+  name: string;
+  priority: number;
+  price: number;
+};
+
+// 1. Fetch Shopping List items from Google Sheet
+export async function fetchShoppingList(appsScriptUrl: string): Promise<ShoppingItem[]> {
+  try {
+    const res = await fetch(`${appsScriptUrl}?action=get_shopping_list`);
+    const data = await res.json();
+    return data.items || [];
+  } catch {
+    return [];
+  }
+}
+
+// 2. Delete item from Google Sheet when marked as bought/checked
+export async function deleteShoppingItemFromSheet(appsScriptUrl: string, itemName: string) {
+  try {
+    await fetch(appsScriptUrl, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain" },
+      body: JSON.stringify({
+        action: "delete_item",
+        name: itemName,
+      }),
+    });
+  } catch (err) {
+    console.error("Failed to delete item from Google Sheet:", err);
+  }
+}
